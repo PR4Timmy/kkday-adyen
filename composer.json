@@ -1,25 +1,32 @@
 {
-    "name": "kkday/adyen",
-    "description": "A PHP client library for accessing Adyen APIs v40",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Timmy Lin",
-            "email": "timmy.lin@kkday.com"
-        }
-    ],
-    "require": {
-        "php": ">=7.3",
-        "ext-ctype": "*",
-        "ext-curl": "*",
-        "ext-json": "*",
-        "ext-mbstring": "*",
-        "ext-openssl": "*"
+  "name": "kkday/adyen",
+  "type": "library",
+  "description": "A PHP client library for accessing Adyen APIs v49",
+  "keywords": [
+    "adyen"
+  ],
+  "homepage": "https://github.com/Adyen/adyen-php-api-library",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=5.3",
+    "monolog/monolog": ">=1.16"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4",
+    "satooshi/php-coveralls": "~1.0.1",
+    "squizlabs/php_codesniffer": "~2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Adyen\\": "src/Adyen/"
     },
-    "autoload": {
-        "psr-4": {
-          "Kkday\\Adyen\\": "src/Adyen"
-        }
+    "classmap": [
+      "src/Adyen/Service/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Adyen\\Tests\\": "tests/"
     }
+  }
 }
