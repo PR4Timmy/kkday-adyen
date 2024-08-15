@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Adyen\\": "src/Adyen/"
+      "Kkday\\Adyen\\": "src/Adyen/"
     },
     "classmap": [
       "src/Adyen/Service/"
