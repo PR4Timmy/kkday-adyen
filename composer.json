@@ -1,5 +1,5 @@
 {
-    "name": "kkday-adyen/php-api-library",
+    "name": "kkday/adyen",
     "description": "A PHP client library for accessing Adyen APIs v40",
     "type": "library",
     "license": "MIT",
