@@ -9,7 +9,14 @@
             "email": "timmy.lin@kkday.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=7.3",
+        "ext-ctype": "*",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*"
+    },
     "autoload": {
         "psr-4": {
           "Kkday\\Adyen\\": "src/Adyen/"
