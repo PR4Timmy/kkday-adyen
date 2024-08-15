@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-          "Kkday\\Adyen\\": "php-api-libaray/src/Adyen/"
+          "Kkday\\Adyen\\": "php-api-libaray/src/"
         }
     }
 }
