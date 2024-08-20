@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\BinLookup;
+namespace Kkday\Adyen\Service\ResourceModel\BinLookup;
 
-class Get3dsAvailability extends \Adyen\Service\AbstractResource
+class Get3dsAvailability extends \Kkday\Adyen\Service\AbstractResource
 {
     /**
      * @var string
@@ -19,7 +19,7 @@ class Get3dsAvailability extends \Adyen\Service\AbstractResource
     /**
      * Get3dsAvailability constructor.
      *
-     * @param \Adyen\Service $service
+     * @param \Kkday\Adyen\Service $service
      */
     public function __construct($service)
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class BinLookup extends \Adyen\Service
+class BinLookup extends \Kkday\Adyen\Service
 {
 	/**
 	 * @var ResourceModel\BinLookup\Get3dsAvailability
@@ -12,20 +12,20 @@ class BinLookup extends \Adyen\Service
 	/**
 	 * BinLookup constructor.
 	 *
-	 * @param \Adyen\Client $client
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Client $client
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
-	public function __construct(\Adyen\Client $client)
+	public function __construct(\Kkday\Adyen\Client $client)
 	{
 		parent::__construct($client);
-		$this->get3dsAvailability = new \Adyen\Service\ResourceModel\BinLookup\Get3dsAvailability($this);
+		$this->get3dsAvailability = new \Kkday\Adyen\Service\ResourceModel\BinLookup\Get3dsAvailability($this);
 	}
 
 
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function get3dsAvailability($params)
 	{

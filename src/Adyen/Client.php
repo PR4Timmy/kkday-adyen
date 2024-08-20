@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen;
+namespace Kkday\Adyen;
 
 use Psr\Log\LoggerInterface;
 use Monolog\Logger;
@@ -39,7 +39,7 @@ class Client
 
 
     /**
-     * @var \Adyen\Config $config
+     * @var \Kkday\Adyen\Config $config
      */
     private $config;
 
@@ -63,11 +63,11 @@ class Client
     {
         if (!$config) {
             // create config
-            $this->config = new \Adyen\Config();
-        } elseif ($config instanceof \Adyen\ConfigInterface) {
+            $this->config = new \Kkday\Adyen\Config();
+        } elseif ($config instanceof \Kkday\Adyen\ConfigInterface) {
             $this->config = $config;
         } else {
-            throw new \Adyen\AdyenException("This config object is not supported, you need to implement the ConfigInterface");
+            throw new \Kkday\Adyen\AdyenException("This config object is not supported, you need to implement the ConfigInterface");
         }
     }
 
@@ -129,8 +129,8 @@ class Client
      */
     public function setEnvironment($environment, $liveEndpointUrlPrefix = null)
     {
-        if ($environment == \Adyen\Environment::TEST) {
-            $this->config->set('environment', \Adyen\Environment::TEST);
+        if ($environment == \Kkday\Adyen\Environment::TEST) {
+            $this->config->set('environment', \Kkday\Adyen\Environment::TEST);
             $this->config->set('endpoint', self::ENDPOINT_TEST);
             $this->config->set('endpointDirectorylookup', self::ENDPOINT_TEST_DIRECTORY_LOOKUP);
             $this->config->set('endpointTerminalCloud', self::ENDPOINT_TERMINAL_CLOUD_TEST);
@@ -138,8 +138,8 @@ class Client
             $this->config->set('endpointNotification', self::ENDPOINT_NOTIFICATION_TEST);
             $this->config->set('endpointAccount', self::ENDPOINT_ACCOUNT_TEST);
             $this->config->set('endpointFund', self::ENDPOINT_FUND_TEST);
-        } elseif ($environment == \Adyen\Environment::LIVE) {
-            $this->config->set('environment', \Adyen\Environment::LIVE);
+        } elseif ($environment == \Kkday\Adyen\Environment::LIVE) {
+            $this->config->set('environment', \Kkday\Adyen\Environment::LIVE);
             $this->config->set('endpointDirectorylookup', self::ENDPOINT_LIVE_DIRECTORY_LOOKUP);
             $this->config->set('endpointTerminalCloud', self::ENDPOINT_TERMINAL_CLOUD_LIVE);
             $this->config->set('endpointNotification', self::ENDPOINT_NOTIFICATION_LIVE);
@@ -157,8 +157,8 @@ class Client
             }
         } else {
             // environment does not exist
-            $msg = "This environment does not exist, use " . \Adyen\Environment::TEST . ' or ' . \Adyen\Environment::LIVE;
-            throw new \Adyen\AdyenException($msg);
+            $msg = "This environment does not exist, use " . \Kkday\Adyen\Environment::TEST . ' or ' . \Kkday\Adyen\Environment::LIVE;
+            throw new \Kkday\Adyen\AdyenException($msg);
         }
     }
 
@@ -363,7 +363,7 @@ class Client
     /**
      * @param HttpClient\ClientInterface $httpClient
      */
-    public function setHttpClient(\Adyen\HttpClient\ClientInterface $httpClient)
+    public function setHttpClient(\Kkday\Adyen\HttpClient\ClientInterface $httpClient)
     {
         $this->httpClient = $httpClient;
     }
@@ -384,7 +384,7 @@ class Client
      */
     protected function createDefaultHttpClient()
     {
-        return new \Adyen\HttpClient\CurlClient();
+        return new \Kkday\Adyen\HttpClient\CurlClient();
     }
 
     /**

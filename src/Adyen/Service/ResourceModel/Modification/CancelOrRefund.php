@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Modification;
+namespace Kkday\Adyen\Service\ResourceModel\Modification;
 
-class CancelOrRefund extends \Adyen\Service\AbstractResource
+class CancelOrRefund extends \Kkday\Adyen\Service\AbstractResource
 {
 	/**
 	 * @var string
@@ -19,7 +19,7 @@ class CancelOrRefund extends \Adyen\Service\AbstractResource
 	/**
 	 * CancelOrRefund constructor.
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 */
     public function __construct($service)
     {

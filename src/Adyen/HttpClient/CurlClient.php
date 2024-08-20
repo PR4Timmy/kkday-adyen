@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen\HttpClient;
+namespace Kkday\Adyen\HttpClient;
 use Adyen\AdyenException;
 
 
@@ -10,13 +10,13 @@ class CurlClient implements ClientInterface
 	/**
 	 * Json API request to Adyen
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 * @param $requestUrl
 	 * @param $params
 	 * @return mixed
 	 * @throws AdyenException
 	 */
-	public function requestJson(\Adyen\Service $service, $requestUrl, $params)
+	public function requestJson(\Kkday\Adyen\Service $service, $requestUrl, $params)
 	{
 		$client = $service->getClient();
 		$config = $client->getConfig();
@@ -43,7 +43,7 @@ class CurlClient implements ClientInterface
 		$this->curlSetHttpProxy($ch, $httpProxy);
 
 		//create a custom User-Agent
-		$userAgent = $config->get('applicationName') . " " . \Adyen\Client::USER_AGENT_SUFFIX . $client->getLibraryVersion();
+		$userAgent = $config->get('applicationName') . " " . \Kkday\Adyen\Client::USER_AGENT_SUFFIX . $client->getLibraryVersion();
 
 		//Set the content type to application/json and use the defined userAgent
 		$headers = array(
@@ -139,13 +139,13 @@ class CurlClient implements ClientInterface
 	/**
 	 * Request to Adyen with query string used for Directory Lookup
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 * @param $requestUrl
 	 * @param $params
 	 * @return mixed
 	 * @throws AdyenException
 	 */
-	public function requestPost(\Adyen\Service $service, $requestUrl, $params)
+	public function requestPost(\Kkday\Adyen\Service $service, $requestUrl, $params)
 	{
 		$client = $service->getClient();
 		$config = $client->getConfig();
@@ -173,7 +173,7 @@ class CurlClient implements ClientInterface
 		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
 
 		// set a custom User-Agent
-		$userAgent = $config->get('applicationName') . " " . \Adyen\Client::USER_AGENT_SUFFIX . $client->getLibraryVersion();
+		$userAgent = $config->get('applicationName') . " " . \Kkday\Adyen\Client::USER_AGENT_SUFFIX . $client->getLibraryVersion();
 
 		//Set the content type to application/json and use the defined userAgent
 		$headers = array(
@@ -229,7 +229,7 @@ class CurlClient implements ClientInterface
 	 * @param $errno
 	 * @param $message
 	 * @param $logger
-	 * @throws \Adyen\ConnectionException
+	 * @throws \Kkday\Adyen\ConnectionException
 	 */
 	protected function handleCurlError($url, $errno, $message, $logger)
 	{
@@ -254,7 +254,7 @@ class CurlClient implements ClientInterface
 		}
 		$msg .= "\n(Network error [errno $errno]: $message)";
 		$logger->error($msg);
-		throw new \Adyen\ConnectionException($msg, $errno);
+		throw new \Kkday\Adyen\ConnectionException($msg, $errno);
 	}
 
 	/**

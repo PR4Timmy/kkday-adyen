@@ -43,14 +43,14 @@ To make the automatice testing cases working for your account change the credent
 Create Payment Request on Test:
 ```php
 
-$client = new \Adyen\Client();
+$client = new \Kkday\Adyen\Client();
 $client->setApplicationName("Adyen PHP Api Library Example");
 $client->setUsername("YOUR USERNAME");
 $client->setPassword("YOUR PASSWORD");
 $client->setXApiKey("YOUR API KEY");
-$client->setEnvironment(\Adyen\Environment::TEST);
+$client->setEnvironment(\Kkday\Adyen\Environment::TEST);
 
-$service = new \Adyen\Service\Payment($client);
+$service = new \Kkday\Adyen\Service\Payment($client);
 
 $json = '{
       "card": {
@@ -94,15 +94,15 @@ Refund example:
 
 ```php
 
-$client = new \Adyen\Client();
+$client = new \Kkday\Adyen\Client();
 $client->setApplicationName("Adyen PHP Api Library Example");
 $client->setUsername("YOUR USERNAME");
 $client->setPassword("YOUR PASSWORD");
 $client->setXApiKey("YOUR API KEY");
-$client->setEnvironment(\Adyen\Environment::TEST);
+$client->setEnvironment(\Kkday\Adyen\Environment::TEST);
 
 // intialize modification service
-$service = new \Adyen\Service\Modification($client);
+$service = new \Kkday\Adyen\Service\Modification($client);
 
 // set the amount you want to refund
 $modificationAmount = array('currency' => 'CURRENCY', 'value' => 'VALUE');

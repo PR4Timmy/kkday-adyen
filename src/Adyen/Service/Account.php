@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class Account extends \Adyen\Service
+class Account extends \Kkday\Adyen\Service
 {
 
     /**
@@ -77,33 +77,33 @@ class Account extends \Adyen\Service
 
     /**
      * Account constructor.
-     * @param \Adyen\Client $client
-     * @throws \Adyen\AdyenException
+     * @param \Kkday\Adyen\Client $client
+     * @throws \Kkday\Adyen\AdyenException
      */
-    public function __construct(\Adyen\Client $client)
+    public function __construct(\Kkday\Adyen\Client $client)
     {
         parent::__construct($client);
 
-        $this->createAccount = new \Adyen\Service\ResourceModel\Account\CreateAccount($this);
-        $this->createAccountHolder = new \Adyen\Service\ResourceModel\Account\CreateAccountHolder($this);
-        $this->updateAccountHolder = new \Adyen\Service\ResourceModel\Account\UpdateAccountHolder($this);
-        $this->getAccountHolder = new \Adyen\Service\ResourceModel\Account\GetAccountHolder($this);
-        $this->updateAccount = new \Adyen\Service\ResourceModel\Account\UpdateAccount($this);
-        $this->uploadDocument = new \Adyen\Service\ResourceModel\Account\UploadDocument($this);
-        $this->getUploadedDocuments = new \Adyen\Service\ResourceModel\Account\GetUploadedDocuments($this);
-        $this->updateAccountHolderState = new \Adyen\Service\ResourceModel\Account\UpdateAccountHolderState($this);
-        $this->deleteBankAccounts = new \Adyen\Service\ResourceModel\Account\DeleteBankAccounts($this);
-        $this->deleteShareholders = new \Adyen\Service\ResourceModel\Account\DeleteShareholders($this);
-        $this->closeAccount = new \Adyen\Service\ResourceModel\Account\CloseAccount($this);
-        $this->closeAccountHolder = new \Adyen\Service\ResourceModel\Account\CloseAccountHolder($this);
-        $this->suspendAccountHolder = new \Adyen\Service\ResourceModel\Account\SuspendAccountHolder($this);
-        $this->unSuspendAccountHolder = new \Adyen\Service\ResourceModel\Account\UnSuspendAccountHolder($this);
+        $this->createAccount = new \Kkday\Adyen\Service\ResourceModel\Account\CreateAccount($this);
+        $this->createAccountHolder = new \Kkday\Adyen\Service\ResourceModel\Account\CreateAccountHolder($this);
+        $this->updateAccountHolder = new \Kkday\Adyen\Service\ResourceModel\Account\UpdateAccountHolder($this);
+        $this->getAccountHolder = new \Kkday\Adyen\Service\ResourceModel\Account\GetAccountHolder($this);
+        $this->updateAccount = new \Kkday\Adyen\Service\ResourceModel\Account\UpdateAccount($this);
+        $this->uploadDocument = new \Kkday\Adyen\Service\ResourceModel\Account\UploadDocument($this);
+        $this->getUploadedDocuments = new \Kkday\Adyen\Service\ResourceModel\Account\GetUploadedDocuments($this);
+        $this->updateAccountHolderState = new \Kkday\Adyen\Service\ResourceModel\Account\UpdateAccountHolderState($this);
+        $this->deleteBankAccounts = new \Kkday\Adyen\Service\ResourceModel\Account\DeleteBankAccounts($this);
+        $this->deleteShareholders = new \Kkday\Adyen\Service\ResourceModel\Account\DeleteShareholders($this);
+        $this->closeAccount = new \Kkday\Adyen\Service\ResourceModel\Account\CloseAccount($this);
+        $this->closeAccountHolder = new \Kkday\Adyen\Service\ResourceModel\Account\CloseAccountHolder($this);
+        $this->suspendAccountHolder = new \Kkday\Adyen\Service\ResourceModel\Account\SuspendAccountHolder($this);
+        $this->unSuspendAccountHolder = new \Kkday\Adyen\Service\ResourceModel\Account\UnSuspendAccountHolder($this);
     }
 
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function createAccount($params)
     {
@@ -113,7 +113,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function createAccountHolder($params)
     {
@@ -123,7 +123,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function updateAccountHolder($params)
     {
@@ -133,7 +133,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function getAccountHolder($params)
     {
@@ -143,7 +143,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function updateAccount($params)
     {
@@ -153,7 +153,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function uploadDocument($params)
     {
@@ -163,7 +163,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function getUploadedDocuments($params)
     {
@@ -173,7 +173,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function updateAccountHolderState($params)
     {
@@ -183,7 +183,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function deleteBankAccounts($params)
     {
@@ -193,7 +193,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function deleteShareholders($params)
     {
@@ -203,7 +203,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function closeAccount($params)
     {
@@ -213,7 +213,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function closeAccountHolder($params)
     {
@@ -223,7 +223,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function suspendAccountHolder($params)
     {
@@ -233,7 +233,7 @@ class Account extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function unSuspendAccountHolder($params)
     {

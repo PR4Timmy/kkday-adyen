@@ -1,5 +1,5 @@
 <?php
-namespace Adyen;
+namespace Kkday\Adyen;
 
 use Adyen\Util\Util;
 

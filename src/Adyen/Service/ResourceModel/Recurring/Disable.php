@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Recurring;
+namespace Kkday\Adyen\Service\ResourceModel\Recurring;
 
-class Disable extends \Adyen\Service\AbstractResource
+class Disable extends \Kkday\Adyen\Service\AbstractResource
 {
 	/**
 	 * @var string
@@ -12,7 +12,7 @@ class Disable extends \Adyen\Service\AbstractResource
 	/**
 	 * Disable constructor.
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 */
 	public function __construct($service)
 	{

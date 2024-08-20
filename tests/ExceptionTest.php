@@ -6,14 +6,14 @@
  * Time: 12:01 PM
  */
 
-namespace Adyen;
+namespace Kkday\Adyen;
 
-class ExceptionTest extends \Adyen\TestCase
+class ExceptionTest extends \Kkday\Adyen\TestCase
 {
 
     public function testExceptionMissingEnvironmentValue()
     {
-        $client = new \Adyen\Client();
+        $client = new \Kkday\Adyen\Client();
         $client->setApplicationName("My Test Application");
         $client->setUsername('username');
         $client->setPassword('password');
@@ -57,17 +57,17 @@ class ExceptionTest extends \Adyen\TestCase
     public function testExceptionMissingUsernamePassword()
     {
         // initialize client
-        $client = new \Adyen\Client();
+        $client = new \Kkday\Adyen\Client();
         $client->setApplicationName("Adyen PHP Api Library");
         $client->setUsername("");
         $client->setPassword("");
-        $client->setEnvironment(\Adyen\Environment::TEST);
+        $client->setEnvironment(\Kkday\Adyen\Environment::TEST);
 
         // initialize service
         $service = new Service\Recurring($client);
 
         // in a model form ?
-        $recurring = array('contract' => \Adyen\Contract::RECURRING);
+        $recurring = array('contract' => \Kkday\Adyen\Contract::RECURRING);
         $params = array('merchantAccount' => $this->getMerchantAccount(), 'recurring' => $recurring, 'shopperReference' => '1');
 
         $e = null;

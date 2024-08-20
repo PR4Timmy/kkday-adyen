@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Payout;
+namespace Kkday\Adyen\Service\ResourceModel\Payout;
 
-class Confirm extends \Adyen\Service\AbstractResource
+class Confirm extends \Kkday\Adyen\Service\AbstractResource
 {
 	/**
 	 * @var string
@@ -12,7 +12,7 @@ class Confirm extends \Adyen\Service\AbstractResource
 	/**
 	 * Confirm constructor.
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 */
 	public function __construct($service)
 	{

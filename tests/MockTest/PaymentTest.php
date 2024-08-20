@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen\MockTest;
+namespace Kkday\Adyen\MockTest;
 
 use Monolog\Handler\TestHandler;
 use Monolog\Logger;
@@ -26,7 +26,7 @@ class PaymentTest extends TestCaseMock
         $client->setLogger($logger);
 
         // initialize service
-        $service = new \Adyen\Service\Payment($client);
+        $service = new \Kkday\Adyen\Service\Payment($client);
 
         $json = '{
               "card": {
@@ -80,7 +80,7 @@ class PaymentTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus, $errno);
 
         // initialize service
-        $service = new \Adyen\Service\Payment($client);
+        $service = new \Kkday\Adyen\Service\Payment($client);
 
         $json = '{
               "card": {
@@ -132,7 +132,7 @@ class PaymentTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus);
 
         // initialize service
-        $service = new \Adyen\Service\Payment($client);
+        $service = new \Kkday\Adyen\Service\Payment($client);
 
         $json = '{
               "card": {

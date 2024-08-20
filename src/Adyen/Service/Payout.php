@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class Payout extends \Adyen\Service
+class Payout extends \Kkday\Adyen\Service
 {
 	/**
 	 * @var ResourceModel\Payout\Confirm
@@ -52,27 +52,27 @@ class Payout extends \Adyen\Service
 	/**
 	 * Payout constructor.
 	 *
-	 * @param \Adyen\Client $client
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Client $client
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
-	public function __construct(\Adyen\Client $client)
+	public function __construct(\Kkday\Adyen\Client $client)
 	{
 		parent::__construct($client);
-		$this->confirm = new \Adyen\Service\ResourceModel\Payout\Confirm($this);
-		$this->decline = new \Adyen\Service\ResourceModel\Payout\Decline($this);
-		$this->storeDetailsAndSubmit = new \Adyen\Service\ResourceModel\Payout\StoreDetailsAndSubmit($this);
-		$this->submit = new \Adyen\Service\ResourceModel\Payout\Submit($this);
-		$this->confirmThirdParty = new \Adyen\Service\ResourceModel\Payout\ThirdParty\ConfirmThirdParty($this);
-		$this->declineThirdParty = new \Adyen\Service\ResourceModel\Payout\ThirdParty\DeclineThirdParty($this);
-		$this->storeDetailsAndSubmitThirdParty = new \Adyen\Service\ResourceModel\Payout\ThirdParty\StoreDetailsAndSubmitThirdParty($this);
-		$this->submitThirdParty = new \Adyen\Service\ResourceModel\Payout\ThirdParty\SubmitThirdParty($this);
-		$this->storeDetail = new \Adyen\Service\ResourceModel\Payout\ThirdParty\StoreDetail($this);
+		$this->confirm = new \Kkday\Adyen\Service\ResourceModel\Payout\Confirm($this);
+		$this->decline = new \Kkday\Adyen\Service\ResourceModel\Payout\Decline($this);
+		$this->storeDetailsAndSubmit = new \Kkday\Adyen\Service\ResourceModel\Payout\StoreDetailsAndSubmit($this);
+		$this->submit = new \Kkday\Adyen\Service\ResourceModel\Payout\Submit($this);
+		$this->confirmThirdParty = new \Kkday\Adyen\Service\ResourceModel\Payout\ThirdParty\ConfirmThirdParty($this);
+		$this->declineThirdParty = new \Kkday\Adyen\Service\ResourceModel\Payout\ThirdParty\DeclineThirdParty($this);
+		$this->storeDetailsAndSubmitThirdParty = new \Kkday\Adyen\Service\ResourceModel\Payout\ThirdParty\StoreDetailsAndSubmitThirdParty($this);
+		$this->submitThirdParty = new \Kkday\Adyen\Service\ResourceModel\Payout\ThirdParty\SubmitThirdParty($this);
+		$this->storeDetail = new \Kkday\Adyen\Service\ResourceModel\Payout\ThirdParty\StoreDetail($this);
 	}
 
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function confirm($params)
 	{
@@ -83,7 +83,7 @@ class Payout extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function decline($params)
 	{
@@ -94,7 +94,7 @@ class Payout extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function storeDetailsAndSubmit($params)
 	{
@@ -105,7 +105,7 @@ class Payout extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function submit($params)
 	{
@@ -116,7 +116,7 @@ class Payout extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function confirmThirdParty($params)
 	{
@@ -127,7 +127,7 @@ class Payout extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function declineThirdParty($params)
 	{
@@ -138,7 +138,7 @@ class Payout extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function storeDetailsAndSubmitThirdParty($params)
 	{
@@ -149,7 +149,7 @@ class Payout extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function submitThirdParty($params)
 	{
@@ -160,7 +160,7 @@ class Payout extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function storeDetail($params)
 	{

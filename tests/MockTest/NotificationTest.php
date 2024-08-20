@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen\MockTest;
+namespace Kkday\Adyen\MockTest;
 
 class NotificationTest extends TestCaseMock
 {
@@ -8,7 +8,7 @@ class NotificationTest extends TestCaseMock
      * @param $jsonFile
      * @param $httpStatus
      * @dataProvider successNotificationCreateProvider
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function testNotificationCreateSuccess($jsonFile, $httpStatus)
     {
@@ -16,7 +16,7 @@ class NotificationTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus);
 
         // initialize service
-        $service = new \Adyen\Service\Notification($client);
+        $service = new \Kkday\Adyen\Service\Notification($client);
 
         $params = json_decode('
             {
@@ -58,7 +58,7 @@ class NotificationTest extends TestCaseMock
      * @param $jsonFile
      * @param $httpStatus
      * @dataProvider successNotificationGetlistProvider
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function testNotificationGetlistSuccess($jsonFile, $httpStatus)
     {
@@ -66,7 +66,7 @@ class NotificationTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus);
 
         // initialize service
-        $service = new \Adyen\Service\Notification($client);
+        $service = new \Kkday\Adyen\Service\Notification($client);
 
         $params = json_decode('
             {
@@ -93,7 +93,7 @@ class NotificationTest extends TestCaseMock
      * @param $jsonFile
      * @param $httpStatus
      * @dataProvider successNotificationGetProvider
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function testNotificationGetSuccess($jsonFile, $httpStatus)
     {
@@ -101,7 +101,7 @@ class NotificationTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus);
 
         // initialize service
-        $service = new \Adyen\Service\Notification($client);
+        $service = new \Kkday\Adyen\Service\Notification($client);
 
         $params = json_decode('
             {
@@ -126,7 +126,7 @@ class NotificationTest extends TestCaseMock
      * @param $jsonFile
      * @param $httpStatus
      * @dataProvider successNotificationUpdateProvider
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function testNotificationUpdateSuccess($jsonFile, $httpStatus)
     {
@@ -134,7 +134,7 @@ class NotificationTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus);
 
         // initialize service
-        $service = new \Adyen\Service\Notification($client);
+        $service = new \Kkday\Adyen\Service\Notification($client);
 
         $params = json_decode('
             {
@@ -182,7 +182,7 @@ class NotificationTest extends TestCaseMock
      * @param $jsonFile
      * @param $httpStatus
      * @dataProvider successNotificationDeleteProvider
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function testNotificationDeleteSuccess($jsonFile, $httpStatus)
     {
@@ -190,7 +190,7 @@ class NotificationTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus);
 
         // initialize service
-        $service = new \Adyen\Service\Notification($client);
+        $service = new \Kkday\Adyen\Service\Notification($client);
 
         $params = json_decode('
             {
@@ -218,7 +218,7 @@ class NotificationTest extends TestCaseMock
      * @param $jsonFile
      * @param $httpStatus
      * @dataProvider successNotificationTestProvider
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function testNotificationTestSuccess($jsonFile, $httpStatus)
     {
@@ -226,7 +226,7 @@ class NotificationTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus);
 
         // initialize service
-        $service = new \Adyen\Service\Notification($client);
+        $service = new \Kkday\Adyen\Service\Notification($client);
 
         $params = json_decode('
             {

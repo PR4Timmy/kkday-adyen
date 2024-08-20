@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen;
+namespace Kkday\Adyen;
 
 /**
  * Created by PhpStorm.
@@ -76,7 +76,7 @@ class CreatePaymentRequestTest extends TestCase
               },
               "merchantAccount": "' . $this->merchantAccount .'",
               "recurring": {
-                "contract": "' . \Adyen\Contract::RECURRING . '",
+                "contract": "' . \Kkday\Adyen\Contract::RECURRING . '",
                 "recurringDetailName": "1"
               },
               "reference": "payment-test",

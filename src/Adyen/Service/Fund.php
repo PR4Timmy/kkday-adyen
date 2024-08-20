@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class Fund extends \Adyen\Service
+class Fund extends \Kkday\Adyen\Service
 {
 
     /**
@@ -37,26 +37,26 @@ class Fund extends \Adyen\Service
 
     /**
      * Fund constructor.
-     * @param \Adyen\Client $client
-     * @throws \Adyen\AdyenException
+     * @param \Kkday\Adyen\Client $client
+     * @throws \Kkday\Adyen\AdyenException
      */
-    public function __construct(\Adyen\Client $client)
+    public function __construct(\Kkday\Adyen\Client $client)
     {
         parent::__construct($client);
 
-        $this->payoutAccountHolder = new \Adyen\Service\ResourceModel\Fund\PayoutAccountHolder($this);
-        $this->accountHolderBalance = new \Adyen\Service\ResourceModel\Fund\AccountHolderBalance($this);
-        $this->accountHolderTransactionList = new \Adyen\Service\ResourceModel\Fund\AccountHolderTransactionList($this);
-        $this->refundNotPaidOutTransfers = new \Adyen\Service\ResourceModel\Fund\RefundNotPaidOutTransfers($this);
-        $this->setupBeneficiary = new \Adyen\Service\ResourceModel\Fund\SetupBeneficiary($this);
-        $this->transferFunds = new \Adyen\Service\ResourceModel\Fund\TransferFunds($this);
+        $this->payoutAccountHolder = new \Kkday\Adyen\Service\ResourceModel\Fund\PayoutAccountHolder($this);
+        $this->accountHolderBalance = new \Kkday\Adyen\Service\ResourceModel\Fund\AccountHolderBalance($this);
+        $this->accountHolderTransactionList = new \Kkday\Adyen\Service\ResourceModel\Fund\AccountHolderTransactionList($this);
+        $this->refundNotPaidOutTransfers = new \Kkday\Adyen\Service\ResourceModel\Fund\RefundNotPaidOutTransfers($this);
+        $this->setupBeneficiary = new \Kkday\Adyen\Service\ResourceModel\Fund\SetupBeneficiary($this);
+        $this->transferFunds = new \Kkday\Adyen\Service\ResourceModel\Fund\TransferFunds($this);
 
     }
 
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function payoutAccountHolder($params)
     {
@@ -66,7 +66,7 @@ class Fund extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function accountHolderBalance($params)
     {
@@ -76,7 +76,7 @@ class Fund extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function accountHolderTransactionList($params)
     {
@@ -86,7 +86,7 @@ class Fund extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function refundNotPaidOutTransfers($params)
     {
@@ -96,7 +96,7 @@ class Fund extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function setupBeneficiary($params)
     {
@@ -106,7 +106,7 @@ class Fund extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function transferFunds($params)
     {

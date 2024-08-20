@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class Notification extends \Adyen\Service
+class Notification extends \Kkday\Adyen\Service
 {
 
     /**
@@ -37,25 +37,25 @@ class Notification extends \Adyen\Service
 
     /**
      * Notification constructor.
-     * @param \Adyen\Client $client
-     * @throws \Adyen\AdyenException
+     * @param \Kkday\Adyen\Client $client
+     * @throws \Kkday\Adyen\AdyenException
      */
-    public function __construct(\Adyen\Client $client)
+    public function __construct(\Kkday\Adyen\Client $client)
     {
         parent::__construct($client);
 
-        $this->createNotificationConfiguration = new \Adyen\Service\ResourceModel\Notification\CreateNotificationConfiguration($this);
-        $this->updateNotificationConfiguration = new \Adyen\Service\ResourceModel\Notification\UpdateNotificationConfiguration($this);
-        $this->getNotificationConfiguration = new \Adyen\Service\ResourceModel\Notification\GetNotificationConfiguration($this);
-        $this->deleteNotificationConfigurations = new \Adyen\Service\ResourceModel\Notification\DeleteNotificationConfigurations($this);
-        $this->getNotificationConfigurationList = new \Adyen\Service\ResourceModel\Notification\GetNotificationConfigurationList($this);
-        $this->testNotificationConfiguration = new \Adyen\Service\ResourceModel\Notification\TestNotificationConfiguration($this);
+        $this->createNotificationConfiguration = new \Kkday\Adyen\Service\ResourceModel\Notification\CreateNotificationConfiguration($this);
+        $this->updateNotificationConfiguration = new \Kkday\Adyen\Service\ResourceModel\Notification\UpdateNotificationConfiguration($this);
+        $this->getNotificationConfiguration = new \Kkday\Adyen\Service\ResourceModel\Notification\GetNotificationConfiguration($this);
+        $this->deleteNotificationConfigurations = new \Kkday\Adyen\Service\ResourceModel\Notification\DeleteNotificationConfigurations($this);
+        $this->getNotificationConfigurationList = new \Kkday\Adyen\Service\ResourceModel\Notification\GetNotificationConfigurationList($this);
+        $this->testNotificationConfiguration = new \Kkday\Adyen\Service\ResourceModel\Notification\TestNotificationConfiguration($this);
     }
 
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function createNotificationConfiguration($params)
     {
@@ -65,7 +65,7 @@ class Notification extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function updateNotificationConfiguration($params)
     {
@@ -75,7 +75,7 @@ class Notification extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function getNotificationConfiguration($params)
     {
@@ -85,7 +85,7 @@ class Notification extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function deleteNotificationConfigurations($params)
     {
@@ -95,7 +95,7 @@ class Notification extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function getNotificationConfigurationList($params)
     {
@@ -105,7 +105,7 @@ class Notification extends \Adyen\Service
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function testNotificationConfiguration($params)
     {

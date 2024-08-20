@@ -6,7 +6,7 @@
  * Time: 2:53 PM
  */
 
-namespace Adyen;
+namespace Kkday\Adyen;
 
 
 use Adyen\Util\Util;

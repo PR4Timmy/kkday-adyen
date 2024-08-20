@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Notification;
+namespace Kkday\Adyen\Service\ResourceModel\Notification;
 
-class GetNotificationConfigurationList extends \Adyen\Service\AbstractResource
+class GetNotificationConfigurationList extends \Kkday\Adyen\Service\AbstractResource
 {
     /**
      * @var string

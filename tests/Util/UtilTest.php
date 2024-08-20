@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen\Tests\Util;
+namespace Kkday\Adyen\Tests\Util;
 
 use Adyen\Util\Util;
 

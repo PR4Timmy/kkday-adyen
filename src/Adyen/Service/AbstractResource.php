@@ -1,11 +1,11 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
 abstract class AbstractResource
 {
 	/**
-	 * @var \Adyen\Service
+	 * @var \Kkday\Adyen\Service
 	 */
 	protected $service;
 
@@ -22,11 +22,11 @@ abstract class AbstractResource
 	/**
 	 * AbstractResource constructor.
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 * @param $endpoint
 	 * @param bool $allowApplicationInfo
 	 */
-	public function __construct(\Adyen\Service $service, $endpoint, $allowApplicationInfo = false)
+	public function __construct(\Kkday\Adyen\Service $service, $endpoint, $allowApplicationInfo = false)
 	{
 		$this->service = $service;
 		$this->endpoint = $endpoint;
@@ -38,7 +38,7 @@ abstract class AbstractResource
 	 *
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function request($params)
 	{
@@ -48,14 +48,14 @@ abstract class AbstractResource
 			if ($params === null && json_last_error() !== JSON_ERROR_NONE) {
 				$msg = 'The parameters in the request expect valid JSON but JSON error code found: ' . json_last_error();
 				$this->service->getClient()->getLogger()->error($msg);
-				throw new \Adyen\AdyenException($msg);
+				throw new \Kkday\Adyen\AdyenException($msg);
 			}
 		}
 
 		if (!is_array($params)) {
 			$msg = 'The parameter is not valid array';
 			$this->service->getClient()->getLogger()->error($msg);
-			throw new \Adyen\AdyenException($msg);
+			throw new \Kkday\Adyen\AdyenException($msg);
 		}
 
 		$params = $this->addDefaultParametersToRequest($params);
@@ -69,7 +69,7 @@ abstract class AbstractResource
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function requestPost($params)
 	{
@@ -77,7 +77,7 @@ abstract class AbstractResource
 		if (!$params) {
 			$msg = 'The parameters in the request are empty';
 			$this->service->getClient()->getLogger()->error($msg);
-			throw new \Adyen\AdyenException($msg);
+			throw new \Kkday\Adyen\AdyenException($msg);
 		}
 
 		$curlClient = $this->service->getClient()->getHttpClient();

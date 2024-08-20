@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\DirectoryLookup;
+namespace Kkday\Adyen\Service\ResourceModel\DirectoryLookup;
 
-class Directory extends \Adyen\Service\AbstractResource
+class Directory extends \Kkday\Adyen\Service\AbstractResource
 {
 	/**
 	 * @var string
@@ -13,7 +13,7 @@ class Directory extends \Adyen\Service\AbstractResource
 	 * Directory constructor.
 	 * https://test.adyen.com/hpp/directory.shtml
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 */
 	public function __construct($service)
 	{

@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Payment;
+namespace Kkday\Adyen\Service\ResourceModel\Payment;
 
-class TerminalCloudAPI extends \Adyen\Service\AbstractResource
+class TerminalCloudAPI extends \Kkday\Adyen\Service\AbstractResource
 {
 	/**
 	 * @var string
@@ -12,7 +12,7 @@ class TerminalCloudAPI extends \Adyen\Service\AbstractResource
 	/**
 	 * TerminalCloudAPI constructor.
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 * @param bool $asynchronous
 	 */
 	public function __construct($service, $asynchronous)

@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class Payment extends \Adyen\Service
+class Payment extends \Kkday\Adyen\Service
 {
 	/**
 	 * @var ResourceModel\Payment\Authorise
@@ -22,21 +22,21 @@ class Payment extends \Adyen\Service
 	/**
 	 * Payment constructor.
 	 *
-	 * @param \Adyen\Client $client
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Client $client
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
-	public function __construct(\Adyen\Client $client)
+	public function __construct(\Kkday\Adyen\Client $client)
 	{
 		parent::__construct($client);
-		$this->authorise = new \Adyen\Service\ResourceModel\Payment\Authorise($this);
-		$this->authorise3D = new \Adyen\Service\ResourceModel\Payment\Authorise3D($this);
-		$this->authorise3DS2 = new \Adyen\Service\ResourceModel\Payment\Authorise3DS2($this);
+		$this->authorise = new \Kkday\Adyen\Service\ResourceModel\Payment\Authorise($this);
+		$this->authorise3D = new \Kkday\Adyen\Service\ResourceModel\Payment\Authorise3D($this);
+		$this->authorise3DS2 = new \Kkday\Adyen\Service\ResourceModel\Payment\Authorise3DS2($this);
 	}
 
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function authorise($params)
 	{
@@ -47,7 +47,7 @@ class Payment extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function authorise3D($params)
 	{
@@ -58,7 +58,7 @@ class Payment extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function authorise3DS2($params)
 	{

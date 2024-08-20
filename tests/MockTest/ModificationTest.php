@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen\MockTest;
+namespace Kkday\Adyen\MockTest;
 
 class ModificationTest extends TestCaseMock
 {
@@ -8,7 +8,7 @@ class ModificationTest extends TestCaseMock
      * @param $jsonFile
      * @param $httpStatus
      * @dataProvider successRefundWithDataProvider
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
     public function testRefundWithDataSuccess($jsonFile, $httpStatus)
     {
@@ -16,7 +16,7 @@ class ModificationTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus);
 
         // initialize service
-        $service = new \Adyen\Service\Modification($client);
+        $service = new \Kkday\Adyen\Service\Modification($client);
 
         $params = json_decode('
              {

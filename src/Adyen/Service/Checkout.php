@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class Checkout extends \Adyen\ApiKeyAuthenticatedService
+class Checkout extends \Kkday\Adyen\ApiKeyAuthenticatedService
 {
 	/**
 	 * @var ResourceModel\Checkout\PaymentSession
@@ -32,23 +32,23 @@ class Checkout extends \Adyen\ApiKeyAuthenticatedService
 	/**
 	 * Checkout constructor.
 	 *
-	 * @param \Adyen\Client $client
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Client $client
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
-	public function __construct(\Adyen\Client $client)
+	public function __construct(\Kkday\Adyen\Client $client)
 	{
 		parent::__construct($client);
-		$this->paymentSession = new \Adyen\Service\ResourceModel\Checkout\PaymentSession($this);
-		$this->paymentsResult = new \Adyen\Service\ResourceModel\Checkout\PaymentsResult($this);
-		$this->paymentMethods = new \Adyen\Service\ResourceModel\Checkout\PaymentMethods($this);
-		$this->payments = new \Adyen\Service\ResourceModel\Checkout\Payments($this);
-		$this->paymentsDetails = new \Adyen\Service\ResourceModel\Checkout\PaymentsDetails($this);
+		$this->paymentSession = new \Kkday\Adyen\Service\ResourceModel\Checkout\PaymentSession($this);
+		$this->paymentsResult = new \Kkday\Adyen\Service\ResourceModel\Checkout\PaymentsResult($this);
+		$this->paymentMethods = new \Kkday\Adyen\Service\ResourceModel\Checkout\PaymentMethods($this);
+		$this->payments = new \Kkday\Adyen\Service\ResourceModel\Checkout\Payments($this);
+		$this->paymentsDetails = new \Kkday\Adyen\Service\ResourceModel\Checkout\PaymentsDetails($this);
 	}
 
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function paymentSession($params)
 	{
@@ -59,7 +59,7 @@ class Checkout extends \Adyen\ApiKeyAuthenticatedService
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function paymentsResult($params)
 	{
@@ -70,7 +70,7 @@ class Checkout extends \Adyen\ApiKeyAuthenticatedService
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function paymentMethods($params)
 	{
@@ -81,7 +81,7 @@ class Checkout extends \Adyen\ApiKeyAuthenticatedService
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function payments($params)
 	{
@@ -92,7 +92,7 @@ class Checkout extends \Adyen\ApiKeyAuthenticatedService
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function paymentsDetails($params)
 	{

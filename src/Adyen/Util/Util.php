@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen\Util;
+namespace Kkday\Adyen\Util;
 
 class Util
 {
@@ -8,16 +8,16 @@ class Util
     {
         // validate if hmacKey is provided
         if (empty($hmacKey)) {
-            throw new \Adyen\AdyenException("You did not provide a HMAC key");
+            throw new \Kkday\Adyen\AdyenException("You did not provide a HMAC key");
         }
 
         // validate if hmacKey contains only hexadecimal chars to be packed with H*
         if (!ctype_xdigit($hmacKey)) {
-            throw new \Adyen\AdyenException("Invalid HMAC key: $hmacKey");
+            throw new \Kkday\Adyen\AdyenException("Invalid HMAC key: $hmacKey");
         }
 
         if (empty($params)) {
-            throw new \Adyen\AdyenException("You did not provide any parameters");
+            throw new \Kkday\Adyen\AdyenException("You did not provide any parameters");
         }
 
         // The character escape function
@@ -82,16 +82,16 @@ class Util
     {
         // validate if hmacKey is provided
         if (empty($hmacKey)) {
-            throw new \Adyen\AdyenException("You did not provide a HMAC key");
+            throw new \Kkday\Adyen\AdyenException("You did not provide a HMAC key");
         }
 
         // validate if hmacKey contains only hexadecimal chars to be packed with H*
         if (!ctype_xdigit($hmacKey)) {
-            throw new \Adyen\AdyenException("Invalid HMAC key: $hmacKey");
+            throw new \Kkday\Adyen\AdyenException("Invalid HMAC key: $hmacKey");
         }
 
         if (empty($params)) {
-            throw new \Adyen\AdyenException("You did not provide any parameters");
+            throw new \Kkday\Adyen\AdyenException("You did not provide any parameters");
         }
 
         $dataToSign = self::getNotificationDataToSign($params);
@@ -136,7 +136,7 @@ class Util
     public static function isValidNotificationHMAC($params, $hmacKey)
     {
         if (empty($params["additionalData"]) || empty($params["additionalData"]["hmacSignature"])) {
-            throw new \Adyen\AdyenException("You did not provide hmacSignature in additionalData");
+            throw new \Kkday\Adyen\AdyenException("You did not provide hmacSignature in additionalData");
         }
         $merchantSign = $params["additionalData"]["hmacSignature"];
         unset($params["additionalData"]);

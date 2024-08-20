@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Payment;
+namespace Kkday\Adyen\Service\ResourceModel\Payment;
 
-class Authorise3D extends \Adyen\Service\AbstractResource
+class Authorise3D extends \Kkday\Adyen\Service\AbstractResource
 {
 	/**
 	 * @var string
@@ -19,7 +19,7 @@ class Authorise3D extends \Adyen\Service\AbstractResource
 	/**
 	 * Authorise3D constructor.
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 */
     public function __construct($service)
     {

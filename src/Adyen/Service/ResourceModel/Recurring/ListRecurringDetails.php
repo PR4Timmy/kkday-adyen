@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Recurring;
+namespace Kkday\Adyen\Service\ResourceModel\Recurring;
 
-class ListRecurringDetails extends \Adyen\Service\AbstractResource
+class ListRecurringDetails extends \Kkday\Adyen\Service\AbstractResource
 {
 	/**
 	 * @var string
@@ -12,7 +12,7 @@ class ListRecurringDetails extends \Adyen\Service\AbstractResource
 	/**
 	 * ListRecurringDetails constructor.
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 */
 	public function __construct($service)
 	{

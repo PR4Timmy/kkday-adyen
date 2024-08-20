@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Adyen\Service\ResourceModel\Modification;
+namespace Kkday\Adyen\Service\ResourceModel\Modification;
 
 
-class RefundWithData extends \Adyen\Service\AbstractResource
+class RefundWithData extends \Kkday\Adyen\Service\AbstractResource
 {
 	/**
 	 * @var string
@@ -21,7 +21,7 @@ class RefundWithData extends \Adyen\Service\AbstractResource
 	/**
 	 * RefundWithData constructor.
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 */
 	public function __construct($service)
 	{

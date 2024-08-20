@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\CheckoutUtility;
+namespace Kkday\Adyen\Service\ResourceModel\CheckoutUtility;
 
-class OriginKeys extends \Adyen\Service\AbstractCheckoutResource
+class OriginKeys extends \Kkday\Adyen\Service\AbstractCheckoutResource
 {
 	/**
 	 * @var string
@@ -12,8 +12,8 @@ class OriginKeys extends \Adyen\Service\AbstractCheckoutResource
 	/**
 	 * OriginKeys constructor.
 	 *
-	 * @param \Adyen\Service $service
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Service $service
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function __construct($service)
 	{

@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Account;
+namespace Kkday\Adyen\Service\ResourceModel\Account;
 
-class UploadDocument extends \Adyen\Service\AbstractResource
+class UploadDocument extends \Kkday\Adyen\Service\AbstractResource
 {
     /**
      * @var string

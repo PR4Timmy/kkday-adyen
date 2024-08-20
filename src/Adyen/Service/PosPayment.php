@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class PosPayment extends \Adyen\ApiKeyAuthenticatedService
+class PosPayment extends \Kkday\Adyen\ApiKeyAuthenticatedService
 {
 	/**
 	 * @var ResourceModel\Payment\TerminalCloudAPI
@@ -27,21 +27,21 @@ class PosPayment extends \Adyen\ApiKeyAuthenticatedService
 	/**
 	 * PosPayment constructor.
 	 *
-	 * @param \Adyen\Client $client
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Client $client
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
-	public function __construct(\Adyen\Client $client)
+	public function __construct(\Kkday\Adyen\Client $client)
 	{
 		parent::__construct($client);
-		$this->runTenderSync = new \Adyen\Service\ResourceModel\Payment\TerminalCloudAPI($this, false);
-		$this->runTenderAsync = new \Adyen\Service\ResourceModel\Payment\TerminalCloudAPI($this, true);
-	    $this->connectedTerminals = new \Adyen\Service\ResourceModel\Payment\ConnectedTerminals($this);
+		$this->runTenderSync = new \Kkday\Adyen\Service\ResourceModel\Payment\TerminalCloudAPI($this, false);
+		$this->runTenderAsync = new \Kkday\Adyen\Service\ResourceModel\Payment\TerminalCloudAPI($this, true);
+	    $this->connectedTerminals = new \Kkday\Adyen\Service\ResourceModel\Payment\ConnectedTerminals($this);
 	}
 
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function runTenderSync($params)
 	{
@@ -52,7 +52,7 @@ class PosPayment extends \Adyen\ApiKeyAuthenticatedService
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function runTenderAsync($params)
 	{
@@ -75,7 +75,7 @@ class PosPayment extends \Adyen\ApiKeyAuthenticatedService
     /**
      * @param $params
      * @return mixed
-     * @throws \Adyen\AdyenException
+     * @throws \Kkday\Adyen\AdyenException
      */
 	public function getConnectedTerminals($params)
     {

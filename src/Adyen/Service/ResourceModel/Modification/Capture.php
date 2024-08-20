@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Modification;
+namespace Kkday\Adyen\Service\ResourceModel\Modification;
 
-class Capture extends \Adyen\Service\AbstractResource
+class Capture extends \Kkday\Adyen\Service\AbstractResource
 {
 	/**
 	 * @var string
@@ -19,7 +19,7 @@ class Capture extends \Adyen\Service\AbstractResource
 	/**
 	 * Capture constructor.
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 */
     public function __construct($service)
     {

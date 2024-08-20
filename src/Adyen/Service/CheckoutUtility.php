@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class CheckoutUtility extends \Adyen\ApiKeyAuthenticatedService
+class CheckoutUtility extends \Kkday\Adyen\ApiKeyAuthenticatedService
 {
 	/**
 	 * @var ResourceModel\CheckoutUtility\OriginKeys
@@ -12,19 +12,19 @@ class CheckoutUtility extends \Adyen\ApiKeyAuthenticatedService
 	/**
 	 * CheckoutUtility constructor.
 	 *
-	 * @param \Adyen\Client $client
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Client $client
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
-	public function __construct(\Adyen\Client $client)
+	public function __construct(\Kkday\Adyen\Client $client)
 	{
 		parent::__construct($client);
-		$this->originKeys = new \Adyen\Service\ResourceModel\CheckoutUtility\OriginKeys($this);
+		$this->originKeys = new \Kkday\Adyen\Service\ResourceModel\CheckoutUtility\OriginKeys($this);
 	}
 
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function originKeys($params)
 	{

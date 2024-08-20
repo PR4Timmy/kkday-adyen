@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen;
+namespace Kkday\Adyen;
 
 class TransactionType
 {

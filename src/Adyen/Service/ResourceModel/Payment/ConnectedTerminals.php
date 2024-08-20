@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Payment;
+namespace Kkday\Adyen\Service\ResourceModel\Payment;
 
-class ConnectedTerminals extends \Adyen\Service\AbstractResource
+class ConnectedTerminals extends \Kkday\Adyen\Service\AbstractResource
 {
     /**
      * @var string

@@ -6,7 +6,7 @@
  * Time: 1:07 PM
  */
 
-namespace Adyen;
+namespace Kkday\Adyen;
 
 
 class RecurringTest extends TestCase
@@ -25,7 +25,7 @@ class RecurringTest extends TestCase
         // initialize service
         $service = new Service\Recurring($client);
 
-        $recurring = array('contract' => \Adyen\Contract::RECURRING);
+        $recurring = array('contract' => \Kkday\Adyen\Contract::RECURRING);
         $params = array('merchantAccount' => $this->getMerchantAccount(), 'recurring' => $recurring, 'shopperReference' => '1');
 
         $result = $service->listRecurringDetails($params);

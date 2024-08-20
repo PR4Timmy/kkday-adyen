@@ -6,7 +6,7 @@
  * Time: 2:39 PM
  */
 
-namespace Adyen;
+namespace Kkday\Adyen;
 
 
 class ModificationTest extends TestCase

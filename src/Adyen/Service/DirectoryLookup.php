@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class DirectoryLookup extends \Adyen\Service
+class DirectoryLookup extends \Kkday\Adyen\Service
 {
 	/**
 	 * @var ResourceModel\DirectoryLookup\Directory
@@ -12,19 +12,19 @@ class DirectoryLookup extends \Adyen\Service
 	/**
 	 * DirectoryLookup constructor.
 	 *
-	 * @param \Adyen\Client $client
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Client $client
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
-	public function __construct(\Adyen\Client $client)
+	public function __construct(\Kkday\Adyen\Client $client)
 	{
 		parent::__construct($client);
-		$this->directoryLookup = new \Adyen\Service\ResourceModel\DirectoryLookup\Directory($this);
+		$this->directoryLookup = new \Kkday\Adyen\Service\ResourceModel\DirectoryLookup\Directory($this);
 	}
 
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function directoryLookup($params)
 	{

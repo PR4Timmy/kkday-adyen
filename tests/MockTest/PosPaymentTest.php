@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen\MockTest;
+namespace Kkday\Adyen\MockTest;
 
 class PosPaymentTest extends TestCaseMock
 {
@@ -15,7 +15,7 @@ class PosPaymentTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus);
 
         // initialize service
-        $service = new \Adyen\Service\PosPayment($client);
+        $service = new \Kkday\Adyen\Service\PosPayment($client);
 
         $json = '{
             "merchantAccount": "PME_POS"

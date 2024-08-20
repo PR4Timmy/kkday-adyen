@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen;
+namespace Kkday\Adyen;
 
 class TestCase extends \PHPUnit_Framework_TestCase
 {
@@ -41,7 +41,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
 	/**
 	 * Mock client
 	 *
-	 * @return \Adyen\Client
+	 * @return \Kkday\Adyen\Client
 	 */
 	protected function createClient()
 	{
@@ -55,11 +55,11 @@ class TestCase extends \PHPUnit_Framework_TestCase
             !empty($settings['password']) &&
             $settings['password'] != "YOUR PASSWORD"
         ) {
-            $client = new \Adyen\Client();
+            $client = new \Kkday\Adyen\Client();
             $client->setApplicationName("My Test Application");
             $client->setUsername($settings['username']);
             $client->setPassword($settings['password']);
-            $client->setEnvironment(\Adyen\Environment::TEST);
+            $client->setEnvironment(\Kkday\Adyen\Environment::TEST);
 
             return $client;
 		} else {
@@ -70,15 +70,15 @@ class TestCase extends \PHPUnit_Framework_TestCase
 	/**
 	 * Mock client object without configuring the config/test.ini
 	 *
-	 * @return \Adyen\Client
+	 * @return \Kkday\Adyen\Client
 	 */
 	protected function createClientWithoutTestIni()
 	{
 		try	{
-			$client = new \Adyen\Client();
+			$client = new \Kkday\Adyen\Client();
 			$client->setApplicationName("My Test Application");
-			$client->setEnvironment(\Adyen\Environment::TEST);
-		} catch (\Adyen\AdyenException $exception) {
+			$client->setEnvironment(\Kkday\Adyen\Environment::TEST);
+		} catch (\Kkday\Adyen\AdyenException $exception) {
 			$this->skipTest($exception->getMessage());
 		}
 
@@ -88,7 +88,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
 	/**
 	 * Mock client for payout
 	 *
-	 * @return \Adyen\Client
+	 * @return \Kkday\Adyen\Client
 	 */
 	protected function createPayoutClient()
 	{
@@ -104,17 +104,17 @@ class TestCase extends \PHPUnit_Framework_TestCase
 				|| $settings['storePayoutPassword'] == "YOUR STORE PAYOUT PASSWORD"
 				|| $settings['storePayoutPassword'] == "")
 			{
-				$client = new \Adyen\Client();
+				$client = new \Kkday\Adyen\Client();
 				$client->setApplicationName("My Test Application");
-				$client->setEnvironment(\Adyen\Environment::TEST);
+				$client->setEnvironment(\Kkday\Adyen\Environment::TEST);
 				$this->skipTest("Skipped the test. Configure your WebService Payout Username and Password in the config");
 				return $client;
 			} else {
-				$client = new \Adyen\Client();
+				$client = new \Kkday\Adyen\Client();
 				$client->setApplicationName("My Test Application");
 				$client->setUsername($settings['storePayoutUsername']);
 				$client->setPassword($settings['storePayoutPassword']);
-				$client->setEnvironment(\Adyen\Environment::TEST);
+				$client->setEnvironment(\Kkday\Adyen\Environment::TEST);
 				return $client;
 			}
 		} else {
@@ -125,7 +125,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
 	/**
 	 * Mock client for reviewing payout
 	 *
-	 * @return \Adyen\Client
+	 * @return \Kkday\Adyen\Client
 	 */
 	protected function createReviewPayoutClient()
 	{
@@ -141,17 +141,17 @@ class TestCase extends \PHPUnit_Framework_TestCase
 				|| $settings['reviewPayoutPassword'] == "YOUR REVIEW PAYOUT PASSWORD"
 				|| $settings['reviewPayoutPassword'] == "")
 			{
-				$client = new \Adyen\Client();
+				$client = new \Kkday\Adyen\Client();
 				$client->setApplicationName("My Test Application");
-				$client->setEnvironment(\Adyen\Environment::TEST);
+				$client->setEnvironment(\Kkday\Adyen\Environment::TEST);
 				$this->skipTest("Skipped the test. Configure your WebService ReviewPayout Username and Password in the config");
 				return $client;
 			} else {
-				$client = new \Adyen\Client();
+				$client = new \Kkday\Adyen\Client();
 				$client->setApplicationName("My Test Application");
 				$client->setUsername($settings['reviewPayoutUsername']);
 				$client->setPassword($settings['reviewPayoutPassword']);
-				$client->setEnvironment(\Adyen\Environment::TEST);
+				$client->setEnvironment(\Kkday\Adyen\Environment::TEST);
 				return $client;
 			}
 		} else {
@@ -168,9 +168,9 @@ class TestCase extends \PHPUnit_Framework_TestCase
             $this->skipTest("Skipped the test. Configure your x-api-key in the config");
         }else{
 
-            $client = new \Adyen\Client();
+            $client = new \Kkday\Adyen\Client();
             $client->setApplicationName("My Test Terminal API App");
-            $client->setEnvironment(\Adyen\Environment::TEST);
+            $client->setEnvironment(\Kkday\Adyen\Environment::TEST);
             $client->setXApiKey($settings['x-api-key']);
             return $client;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
 class AbstractCheckoutResource extends AbstractResource
 {
@@ -9,7 +9,7 @@ class AbstractCheckoutResource extends AbstractResource
 	 *
 	 * @param $service
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function getCheckoutEndpoint($service)
 	{
@@ -18,7 +18,7 @@ class AbstractCheckoutResource extends AbstractResource
 			$logger = $service->getClient()->getLogger();
 			$msg = "Please provide your unique live url prefix on the setEnvironment() call on the Client or provide endpointCheckout in your config object.";
 			$logger->error($msg);
-			throw new \Adyen\AdyenException($msg);
+			throw new \Kkday\Adyen\AdyenException($msg);
 		}
 
 		return $service->getClient()->getConfig()->get('endpointCheckout');

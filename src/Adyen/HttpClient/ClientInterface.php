@@ -1,22 +1,22 @@
 <?php
 
-namespace Adyen\HttpClient;
+namespace Kkday\Adyen\HttpClient;
 
 interface ClientInterface
 {
 	/**
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 * @param $requestUrl
 	 * @param $params
 	 * @return mixed
 	 */
-	public function requestJson(\Adyen\Service $service, $requestUrl, $params);
+	public function requestJson(\Kkday\Adyen\Service $service, $requestUrl, $params);
 
 	/**
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 * @param $requestUrl
 	 * @param $params
 	 * @return mixed
 	 */
-	public function requestPost(\Adyen\Service $service, $requestUrl, $params);
+	public function requestPost(\Kkday\Adyen\Service $service, $requestUrl, $params);
 }

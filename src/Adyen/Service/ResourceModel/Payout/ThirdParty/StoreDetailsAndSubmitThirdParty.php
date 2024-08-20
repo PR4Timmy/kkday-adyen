@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Payout\ThirdParty;
+namespace Kkday\Adyen\Service\ResourceModel\Payout\ThirdParty;
 
-class StoreDetailsAndSubmitThirdParty extends \Adyen\Service\AbstractResource
+class StoreDetailsAndSubmitThirdParty extends \Kkday\Adyen\Service\AbstractResource
 {
 	/**
 	 * @var string
@@ -12,7 +12,7 @@ class StoreDetailsAndSubmitThirdParty extends \Adyen\Service\AbstractResource
 	/**
 	 * StoreDetailsAndSubmitThirdParty constructor.
 	 *
-	 * @param \Adyen\Service $service
+	 * @param \Kkday\Adyen\Service $service
 	 */
 	public function __construct($service)
 	{

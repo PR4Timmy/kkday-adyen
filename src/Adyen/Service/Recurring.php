@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class Recurring extends \Adyen\Service
+class Recurring extends \Kkday\Adyen\Service
 {
 	/**
 	 * @var ResourceModel\Recurring\ListRecurringDetails
@@ -17,15 +17,15 @@ class Recurring extends \Adyen\Service
 	/**
 	 * Recurring constructor.
 	 *
-	 * @param \Adyen\Client $client
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Client $client
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
-	public function __construct(\Adyen\Client $client)
+	public function __construct(\Kkday\Adyen\Client $client)
 	{
 		parent::__construct($client);
-		$this->listRecurringDetails = new \Adyen\Service\ResourceModel\Recurring\ListRecurringDetails($this);
+		$this->listRecurringDetails = new \Kkday\Adyen\Service\ResourceModel\Recurring\ListRecurringDetails($this);
 
-		$this->disable = new \Adyen\Service\ResourceModel\Recurring\Disable(
+		$this->disable = new \Kkday\Adyen\Service\ResourceModel\Recurring\Disable(
 			$this,
 			$this->getClient()->getConfig()->get('endpoint') . '/disable',
 			array('merchantAccount', 'shopperReference'));
@@ -34,7 +34,7 @@ class Recurring extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function listRecurringDetails($params)
 	{
@@ -45,7 +45,7 @@ class Recurring extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function disable($params)
 	{

@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Checkout;
+namespace Kkday\Adyen\Service\ResourceModel\Checkout;
 
-class PaymentsDetails extends \Adyen\Service\AbstractCheckoutResource
+class PaymentsDetails extends \Kkday\Adyen\Service\AbstractCheckoutResource
 {
 	/**
 	 * @var string
@@ -12,8 +12,8 @@ class PaymentsDetails extends \Adyen\Service\AbstractCheckoutResource
 	/**
 	 * PaymentsDetails constructor.
 	 *
-	 * @param \Adyen\Service $service
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Service $service
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function __construct($service)
 	{

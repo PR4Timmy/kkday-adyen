@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Account;
+namespace Kkday\Adyen\Service\ResourceModel\Account;
 
-class DeleteBankAccounts extends \Adyen\Service\AbstractResource
+class DeleteBankAccounts extends \Kkday\Adyen\Service\AbstractResource
 {
     /**
      * @var string

@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen;
+namespace Kkday\Adyen;
 
 class AbstractResourceTest extends TestCase
 {
@@ -12,7 +12,7 @@ class AbstractResourceTest extends TestCase
 	/**
 	 * If the allowApplicationInfo is false the applicationInfo key should be removed from the params
 	 *
-	 * @covers \Adyen\Service\AbstractResource::handleApplicationInfoInRequest
+	 * @covers \Kkday\Adyen\Service\AbstractResource::handleApplicationInfoInRequest
 	 */
 	public function testHandleApplicationInfoInRequestShouldRemoveApplicationInfoFromParams()
 	{
@@ -29,7 +29,7 @@ class AbstractResourceTest extends TestCase
 		$mockedClient = $this->createClientWithoutTestIni();
 
 		// Mock abstract class with mocked client and $paramsToFilter parameters
-		$mockedClass = $this->getMockForAbstractClass($this->className, array((new \Adyen\Service($mockedClient)), "", false));
+		$mockedClass = $this->getMockForAbstractClass($this->className, array((new \Kkday\Adyen\Service($mockedClient)), "", false));
 
 		// Get private method as testable public method
 		$method = $this->getMethod($this->className, "handleApplicationInfoInRequest");
@@ -42,7 +42,7 @@ class AbstractResourceTest extends TestCase
 	/**
 	 * If the allowApplicationInfo is true the applicationInfo Adyen Library should be overwritten with the real values
 	 *
-	 * @covers \Adyen\Service\AbstractResource::handleApplicationInfoInRequest
+	 * @covers \Kkday\Adyen\Service\AbstractResource::handleApplicationInfoInRequest
 	 */
 	public function testHandleApplicationInfoInRequestShouldOverwriteApplicationInfoAdyenLibraryParams()
 	{
@@ -59,7 +59,7 @@ class AbstractResourceTest extends TestCase
 		$mockedClient = $this->createClientWithoutTestIni();
 
 		// Mock abstract class with mocked client and $paramsToFilter parameters
-		$mockedClass = $this->getMockForAbstractClass($this->className, array((new \Adyen\Service($mockedClient)), "", true));
+		$mockedClass = $this->getMockForAbstractClass($this->className, array((new \Kkday\Adyen\Service($mockedClient)), "", true));
 
 		// Get private method as testable public method
 		$method = $this->getMethod($this->className, "handleApplicationInfoInRequest");
@@ -74,7 +74,7 @@ class AbstractResourceTest extends TestCase
 	 * If the config adyenPaymentSource is set the applicationInfo adyenPaymentSource should be added to the params
 	 * If the config externalPlatform is not set the applicationInfo externalPlatform should not be added to the params
 	 *
-	 * @covers \Adyen\Service\AbstractResource::handleApplicationInfoInRequest
+	 * @covers \Kkday\Adyen\Service\AbstractResource::handleApplicationInfoInRequest
 	 */
 	public function testHandleApplicationInfoInRequestShouldAddApplicationInfoAdyenPaymentSourceToParams()
 	{
@@ -95,7 +95,7 @@ class AbstractResourceTest extends TestCase
 		$mockedClient->setAdyenPaymentSource("name-test", "version-test");
 
 		// Mock abstract class with mocked client and $paramsToFilter parameters
-		$mockedClass = $this->getMockForAbstractClass($this->className, array((new \Adyen\Service($mockedClient)), "", true));
+		$mockedClass = $this->getMockForAbstractClass($this->className, array((new \Kkday\Adyen\Service($mockedClient)), "", true));
 
 		// Get private method as testable public method
 		$method = $this->getMethod($this->className, "handleApplicationInfoInRequest");
@@ -111,7 +111,7 @@ class AbstractResourceTest extends TestCase
 	 * If the config adyenPaymentSource integrator is set, the applicationInfo adyenPaymentSource integrator should be
 	 * added to the params.
 	 *
-	 * @covers \Adyen\Service\AbstractResource::handleApplicationInfoInRequest
+	 * @covers \Kkday\Adyen\Service\AbstractResource::handleApplicationInfoInRequest
 	 */
 	public function testHandleApplicationInfoInRequestShouldAddApplicationInfoAdyenPaymentSourceIntegratorToParams()
 	{
@@ -123,7 +123,7 @@ class AbstractResourceTest extends TestCase
 		$mockedClient->setExternalPlatform("name-test", "version-test", "integrator-test");
 
 		// Mock abstract class with mocked client and $paramsToFilter parameters
-		$mockedClass = $this->getMockForAbstractClass($this->className, array((new \Adyen\Service($mockedClient)), "", true));
+		$mockedClass = $this->getMockForAbstractClass($this->className, array((new \Kkday\Adyen\Service($mockedClient)), "", true));
 
 		// Get private method as testable public method
 		$method = $this->getMethod($this->className, "handleApplicationInfoInRequest");
@@ -140,7 +140,7 @@ class AbstractResourceTest extends TestCase
 	 * If the config adyenPaymentSource integrator is not set, the applicationInfo adyenPaymentSource integrator should
 	 * not be added to the params.
 	 *
-	 * @covers \Adyen\Service\AbstractResource::handleApplicationInfoInRequest
+	 * @covers \Kkday\Adyen\Service\AbstractResource::handleApplicationInfoInRequest
 	 */
 	public function testHandleApplicationInfoInRequestShouldNotAddApplicationInfoAdyenPaymentSourceIntegratorToParams()
 	{
@@ -152,7 +152,7 @@ class AbstractResourceTest extends TestCase
 		$mockedClient->setExternalPlatform("name-test", "version-test");
 
 		// Mock abstract class with mocked client and $paramsToFilter parameters
-		$mockedClass = $this->getMockForAbstractClass($this->className, array((new \Adyen\Service($mockedClient)), "", true));
+		$mockedClass = $this->getMockForAbstractClass($this->className, array((new \Kkday\Adyen\Service($mockedClient)), "", true));
 
 		// Get private method as testable public method
 		$method = $this->getMethod($this->className, "handleApplicationInfoInRequest");

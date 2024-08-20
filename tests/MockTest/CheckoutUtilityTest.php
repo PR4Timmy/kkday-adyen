@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen\MockTest;
+namespace Kkday\Adyen\MockTest;
 
 
 class CheckoutUtilityTest extends TestCaseMock
@@ -18,7 +18,7 @@ class CheckoutUtilityTest extends TestCaseMock
         $client = $this->createMockClient($jsonFile, $httpStatus);
 
         // initialize service
-        $service = new \Adyen\Service\CheckoutUtility($client);
+        $service = new \Kkday\Adyen\Service\CheckoutUtility($client);
 
         $params = array(
             "originDomains" => array(

@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service\ResourceModel\Account;
+namespace Kkday\Adyen\Service\ResourceModel\Account;
 
-class UnSuspendAccountHolder extends \Adyen\Service\AbstractResource
+class UnSuspendAccountHolder extends \Kkday\Adyen\Service\AbstractResource
 {
     /**
      * @var string

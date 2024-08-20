@@ -1,8 +1,8 @@
 <?php
 
-namespace Adyen\Service;
+namespace Kkday\Adyen\Service;
 
-class Modification extends \Adyen\Service
+class Modification extends \Kkday\Adyen\Service
 {
 	/**
 	 * @var ResourceModel\Modification\Cancel
@@ -37,24 +37,24 @@ class Modification extends \Adyen\Service
 	/**
 	 * Modification constructor.
 	 *
-	 * @param \Adyen\Client $client
-	 * @throws \Adyen\AdyenException
+	 * @param \Kkday\Adyen\Client $client
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
-	public function __construct(\Adyen\Client $client)
+	public function __construct(\Kkday\Adyen\Client $client)
 	{
 		parent::__construct($client);
-		$this->cancel = new \Adyen\Service\ResourceModel\Modification\Cancel($this);
-		$this->cancelOrRefund = new \Adyen\Service\ResourceModel\Modification\CancelOrRefund($this);
-		$this->capture = new \Adyen\Service\ResourceModel\Modification\Capture($this);
-		$this->refund = new \Adyen\Service\ResourceModel\Modification\Refund($this);
-		$this->refundWithData = new \Adyen\Service\ResourceModel\Modification\RefundWithData($this);
-		$this->adjustAuthorisation = new \Adyen\Service\ResourceModel\Modification\AdjustAuthorisation($this);
+		$this->cancel = new \Kkday\Adyen\Service\ResourceModel\Modification\Cancel($this);
+		$this->cancelOrRefund = new \Kkday\Adyen\Service\ResourceModel\Modification\CancelOrRefund($this);
+		$this->capture = new \Kkday\Adyen\Service\ResourceModel\Modification\Capture($this);
+		$this->refund = new \Kkday\Adyen\Service\ResourceModel\Modification\Refund($this);
+		$this->refundWithData = new \Kkday\Adyen\Service\ResourceModel\Modification\RefundWithData($this);
+		$this->adjustAuthorisation = new \Kkday\Adyen\Service\ResourceModel\Modification\AdjustAuthorisation($this);
 	}
 
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function cancel($params)
 	{
@@ -65,7 +65,7 @@ class Modification extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function cancelOrRefund($params)
 	{
@@ -76,7 +76,7 @@ class Modification extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function capture($params)
 	{
@@ -87,7 +87,7 @@ class Modification extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function refund($params)
 	{
@@ -98,7 +98,7 @@ class Modification extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function refundWithData($params)
 	{
@@ -109,7 +109,7 @@ class Modification extends \Adyen\Service
 	/**
 	 * @param $params
 	 * @return mixed
-	 * @throws \Adyen\AdyenException
+	 * @throws \Kkday\Adyen\AdyenException
 	 */
 	public function adjustAuthorisation($params)
 	{

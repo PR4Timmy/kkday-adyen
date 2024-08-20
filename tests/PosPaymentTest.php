@@ -1,6 +1,6 @@
 <?php
 
-namespace Adyen;
+namespace Kkday\Adyen;
 
 use Adyen\Util\Util;
 
@@ -20,7 +20,7 @@ class PosPaymentTest extends TestCase
         $service = new Service\PosPayment($client);
 
         //Construct request
-        $transactionType = \Adyen\TransactionType::NORMAL;
+        $transactionType = \Kkday\Adyen\TransactionType::NORMAL;
         $serviceID = date("dHis");
         $timeStamper = date("Y-m-d") . "T" . date("H:i:s+00:00");
 
@@ -85,7 +85,7 @@ class PosPaymentTest extends TestCase
         $service = new Service\PosPayment($client);
 
         //Construct request
-        $transactionType = \Adyen\TransactionType::NORMAL;
+        $transactionType = \Kkday\Adyen\TransactionType::NORMAL;
         $serviceID = date("dHis");
         $timeStamper = date("Y-m-d") . "T" . date("H:i:s+00:00");
 
@@ -149,7 +149,7 @@ class PosPaymentTest extends TestCase
         $service = new Service\PosPayment($client);
 
         //Construct request
-        $transactionType = \Adyen\TransactionType::REFUND;
+        $transactionType = \Kkday\Adyen\TransactionType::REFUND;
         $serviceID = date("dHis");
         $timeStamper = date("Y-m-d") . "T" . date("H:i:s+00:00");
 
@@ -202,7 +202,7 @@ class PosPaymentTest extends TestCase
 
     /**
      * After timeout, an Exception will be returned with code: CURLE_OPERATION_TIMEOUTED
-     * @covers \Adyen\HttpClient\CurlClient::handleCurlError
+     * @covers \Kkday\Adyen\HttpClient\CurlClient::handleCurlError
      */
     public function testPosPaymentFailTimeout()
     {
@@ -218,7 +218,7 @@ class PosPaymentTest extends TestCase
         $service = new Service\PosPayment($client);
 
         //Construct request
-        $transactionType = \Adyen\TransactionType::NORMAL;
+        $transactionType = \Kkday\Adyen\TransactionType::NORMAL;
         $serviceID = date("dHis");
         $timeStamper = date("Y-m-d") . "T" . date("H:i:s+00:00");
 
